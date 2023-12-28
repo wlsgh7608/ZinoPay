@@ -1,4 +1,4 @@
-package com.zino;
+package com.zino.membership;
 
 
 import org.springframework.boot.SpringApplication;

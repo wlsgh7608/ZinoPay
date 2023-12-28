@@ -1,4 +1,4 @@
-package com.zino;
+package com.zino.membership;
 
 public class Main {
     public static void main(String[] args) {
