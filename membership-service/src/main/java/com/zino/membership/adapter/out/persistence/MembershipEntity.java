@@ -24,6 +24,14 @@ public class MembershipEntity {
     private boolean isValid;
     private boolean isCorp;
 
+    public MembershipEntity(String name, String address, String email, boolean isValid, boolean isCorp) {
+        this.name = name;
+        this.address = address;
+        this.email = email;
+        this.isValid = isValid;
+        this.isCorp = isCorp;
+    }
+
     @Override
     public String toString() {
         return "MembershipEntity{" +
