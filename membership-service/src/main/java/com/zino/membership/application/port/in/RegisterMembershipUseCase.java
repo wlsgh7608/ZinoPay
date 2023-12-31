@@ -1,10 +1,10 @@
 package com.zino.membership.application.port.in;
 
-import com.zino.membership.domain.Membership;
+import com.zino.membership.domain.MembershipDto;
 
 
 public interface RegisterMembershipUseCase {
 
-    Membership registerMembership(RegisterMembershipCommand command);
+    MembershipDto registerMembership(RegisterMembershipCommand command);
 
 }

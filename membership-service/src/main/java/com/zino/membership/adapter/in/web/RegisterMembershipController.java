@@ -3,7 +3,7 @@ package com.zino.membership.adapter.in.web;
 import com.zino.membership.application.port.in.RegisterMembershipCommand;
 import com.zino.membership.application.port.in.RegisterMembershipUseCase;
 import com.zino.membership.common.WebAdapter;
-import com.zino.membership.domain.Membership;
+import com.zino.membership.domain.MembershipDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +17,7 @@ public class RegisterMembershipController {
     private final RegisterMembershipUseCase registerMembershipUseCase;
 
     @PostMapping("/register")
-    public Membership register(@RequestBody RegisterMembershipRequest request) {
+    public MembershipDto register(@RequestBody RegisterMembershipRequest request) {
         // request
 
 

@@ -1,13 +1,13 @@
 package com.zino.membership.adapter.out.persistence;
 
-import com.zino.membership.domain.Membership;
+import com.zino.membership.domain.MembershipDto;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MembershipMapper {
 
-    public Membership mapToDomain(MembershipEntity membershipEntity) {
-        return new Membership(
+    public MembershipDto mapToDomain(MembershipEntity membershipEntity) {
+        return new MembershipDto(
                 membershipEntity.getMembershipId() + "",
                 membershipEntity.getName(),
                 membershipEntity.getEmail(),

@@ -3,7 +3,7 @@ package com.zino.membership.domain;
 import lombok.*;
 
 @AllArgsConstructor
-public class Membership {
+public class MembershipDto {
     @Getter
     private final String membershipId;
     @Getter
