@@ -2,7 +2,6 @@ package com.zino.membership.adapter.out.persistence;
 
 import com.zino.membership.application.port.out.RegisterMembershipOutPort;
 import com.zino.membership.common.PersistenceAdapter;
-import com.zino.membership.domain.Membership;
 import lombok.RequiredArgsConstructor;
 
 @PersistenceAdapter
@@ -12,20 +11,18 @@ public class MembershipPersistenceAdapter implements RegisterMembershipOutPort {
 
     @Override
     public MembershipEntity createMembership(
-            Membership.MembershipName membershipName,
-            Membership.MembershipEmail membershipEmail,
-            Membership.MembershipAddress membershipAddress,
-            Membership.MembershipIsValid membershipIsValid,
-            Membership.MembershipIsCorp membershipIsCorp) {
-
-
-
+            String membershipName,
+            String membershipEmail,
+            String membershipAddress,
+            boolean membershipIsValid,
+            boolean membershipIsCorp)
+    {
         MembershipEntity membership = new MembershipEntity(
-                membershipName.getNameValue(),
-                membershipEmail.getEmailValue(),
-                membershipAddress.getAddressValue(),
-                membershipIsValid.isValidValue(),
-                membershipIsCorp.isCorpValue()
+                membershipName,
+                membershipEmail,
+                membershipAddress,
+                membershipIsValid,
+                membershipIsCorp
         );
 
         return membershipRepository.save(membership);
