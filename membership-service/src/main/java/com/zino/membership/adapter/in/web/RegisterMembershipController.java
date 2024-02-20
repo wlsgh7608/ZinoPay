@@ -11,12 +11,11 @@ import org.springframework.web.bind.annotation.*;
 @WebAdapter
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/membership")
 public class RegisterMembershipController {
 
     private final RegisterMembershipUseCase registerMembershipUseCase;
 
-    @PostMapping("/register")
+    @PostMapping("/membership/register")
     public MembershipDto register(@RequestBody RegisterMembershipRequest request) {
         // request
 
